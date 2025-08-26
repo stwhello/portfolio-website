@@ -1,4 +1,9 @@
 import './contact.scss';
+import girl from "../../assets/girl.png"
+import decortaion from "../../assets/decoration.png"
+import github from "../../assets/github.png"
+import linkedIn from "../../assets/linkedIn.png"
+import resume from "../../assets/resume.png"
 
 function Contact() {
   return (
@@ -26,21 +31,21 @@ function Contact() {
         <div className="social-links">
           <div className="social-item">
             <div className="icon-circle">
-              <img src="/linkedin.png" alt="LinkedIn" />
+              <img src={linkedIn} alt="LinkedIn" />
             </div>
             <span>LinkedIn</span>
           </div>
 
           <div className="social-item">
             <div className="icon-circle">
-              <img src="/github.png" alt="GitHub" />
+              <img src={github} alt="GitHub" />
             </div>
             <span>GitHub</span>
           </div>
 
           <div className="social-item">
             <div className="icon-circle">
-              <img src="/resume.png" alt="Resume" />
+              <img src={resume} alt="Resume" />
             </div>
             <span>Resume</span>
           </div>
@@ -48,8 +53,8 @@ function Contact() {
       </div>
 
       <div className="contact-right">
-        <img src="/girl.png" alt="Girl" />
-        <img src="/decor.png" alt="Decoration" />
+        <img src={girl} alt="Girl" />
+        <img src={decortaion} alt="Decoration" />
       </div>
     </section>
   );
