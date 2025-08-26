@@ -1,0 +1,24 @@
+.header {
+  padding: 6.39vh 46.46vw 0 10.99vw; 
+
+  .nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 7.03vw; 
+
+      li {
+        color: #fff;
+        text-align: center;
+        font-family: var(--font-body);
+        font-size: 1.65vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        cursor: pointer;
+      }
+    }
+  }
+}

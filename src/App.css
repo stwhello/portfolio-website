@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #341E34;
+  --font-heading: "Bricolage Grotesque 72pt", sans-serif;
+  --font-body: "Clash Display", sans-serif;
+}
+
+
+body {
+  background: var(--bg-color);
+  font-family: var(--font-body);
+}
