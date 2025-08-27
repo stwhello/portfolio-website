@@ -9,11 +9,11 @@ import w4 from "../../assets/w4.png";
 import w5 from "../../assets/w5.png";
 
 const logos = [
-  { src: w1, left: "-2%", rotate: -8 },
-  { src: w2, left: "20%", rotate: 5 },
-  { src: w3, left: "40%", rotate: -5 },
-  { src: w4, left: "58%", rotate: 8 },
-  { src: w5, left: "72%", rotate: -6 },
+  { src: w1, left: "-6%", rotate: -8 },
+  { src: w2, left: "16%", rotate: 5 },
+  { src: w3, left: "36%", rotate: -5 },
+  { src: w4, left: "56%", rotate: 8 },
+  { src: w5, left: "70%", rotate: -6 },
 ];
 
 const Scrambler = () => {
