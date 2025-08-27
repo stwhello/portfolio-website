@@ -1,0 +1,63 @@
+.ribbon-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+
+  .strip {
+    position: absolute;
+    width: 112vw;
+    height: 14vh;
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .marquee {
+      display: flex;
+      animation: scroll 40s linear infinite;
+    }
+
+    .marquee-item {
+      display: flex;
+      gap: 2vw;
+
+      span {
+        display: flex;
+        align-items: center;
+        font-family: var(--font-heading);
+        font-size: 4vw;
+        font-style: normal;
+        font-weight: 700;
+        color: #e43636;
+        white-space: nowrap;
+
+        img {
+          width: 4vw;
+          margin: 0 1vw;
+        }
+      }
+    }
+  }
+
+  .strip-one {
+    top: 30vh;
+    left: -2vw;
+    transform: rotate(-11.875deg);
+  }
+
+  .strip-two {
+    left: -2vw;
+    top: 45vh;
+    transform: rotate(7.578deg);
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
