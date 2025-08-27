@@ -8,7 +8,10 @@
   --bg-color: #341E34;
   --font-heading: "Bricolage Grotesque 72pt", sans-serif;
   --font-body: "Clash Display", sans-serif;
-  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 

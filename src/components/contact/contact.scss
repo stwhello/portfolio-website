@@ -1,137 +1,220 @@
 .contact {
+  height: 100vh;
+  background: #760037;
+  padding: 12vh 0 4vh 4vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8vh 0 8vh 10vw;
-  background: #760037;
-  color: #fff;
-  font-family: var(--font-clash);
-  min-height: 100vh;
+  position: relative;
 
   .contact-left {
-    flex: 1;
-    max-width: 45vw;
+    display: flex;
+    flex-direction: column;
 
-    h2 {
-      font-size: 3vw;
-      font-weight: 600;
-      margin-bottom: 4vh;
-      line-height: 1.2;
+    .contact-title {
+      color: #ffe1e2;
+      font-family: var(--font-heading);
+      font-size: 6.2vw;
+      font-weight: 700;
+      margin-bottom: 2vh;
     }
 
     .contact-box {
+      width: 53vw;
+      height: 55vh;
+      border-radius: 2vw;
+      background: #ffffff;
+      padding: 2.5vh 1vw;
       display: flex;
       flex-direction: column;
-      gap: 3vh;
-      margin-bottom: 5vh;
+      gap: 2vh;
+      border: 0.5vw solid #d9d9d9;
 
-      .field {
+      .input-wrapper {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+        height: 8vh;
+        border-radius: 2vw;
+        background: #fff9af;
+        overflow: hidden;
 
         .label {
-          font-size: 1.2vw;
-          margin-bottom: 1vh;
+          width: 12vw;
+          height: 100%;
+          background: #e43636;
+          color: #fff;
+          font-family: var(--font-heading);
+          font-size: 1.4vw;
+          font-weight: 700;
+          display: flex;
+          justify-content: center;
+          border-radius: 2vw;
+          align-items: center;
         }
 
         input {
-          padding: 1.2vh 1vw;
-          font-size: 1vw;
+          flex: 1;
           border: none;
-          border-radius: 0.6vw;
           outline: none;
+          background: transparent;
+          padding: 0 1vw;
+          font-family: var(--font-heading);
+          font-size: 1vw;
+          font-weight: 400;
+          color: #767676;
+
+          &::placeholder {
+            color: #767676;
+          }
         }
       }
 
-      .message-box {
-        display: flex;
-        flex-direction: column;
+      .message-wrapper {
+        position: relative;
+        width: 50vw;
+        height: 29vh;
+        border-radius: 2vw;
+        background: #fff9af;
 
         textarea {
-          padding: 1.5vh 1vw;
-          font-size: 1vw;
+          width: 100%;
+          height: 100%;
           border: none;
-          border-radius: 0.6vw;
-          resize: none;
-          min-height: 15vh;
-          margin-bottom: 2vh;
           outline: none;
+          resize: none;
+          background: transparent;
+          padding: 2vh 2vw;
+          font-family: var(--font-heading);
+          font-size: 1vw;
+          font-weight: 400;
+          color: #767676;
+
+          &::placeholder {
+            color: #767676;
+          }
         }
 
         .send-btn {
-          align-self: flex-end;
-          padding: 1.2vh 2.5vw;
-          font-size: 1vw;
+          position: absolute;
+          bottom: 1vh;
+          left: 1vw;
+          width: 12vw;
+          height: 8vh;
+          border-radius: 2vw;
+          background: #65fe6f;
           border: none;
-          border-radius: 0.6vw;
-          background: #fff;
-          color: #341E34;
-          font-weight: 600;
+          font-family: var(--font-heading);
+          font-size: 1.3vw;
+          font-weight: 700;
+          color: #fff;
           cursor: pointer;
-          transition: 0.3s;
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
 
           &:hover {
-            background: #ddd;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(101, 254, 111, 0.5);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              120deg,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+            transition: left 0.4s ease;
+          }
+
+          &:hover::after {
+            left: 100%;
           }
         }
       }
     }
 
-    .social-links {
+    .socials {
       display: flex;
-      gap: 3vw;
+      align-items: center;
+      margin-top: 5vh;
+      gap: 2.5vw;
 
       .social-item {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 1vh;
-        cursor: pointer;
+        gap: 1vw;
+        text-decoration: none;
+        transition: transform 0.3s ease;
 
-        .icon-circle {
-          width: 5vw;
-          height: 5vw;
-          border-radius: 50%;
+        .logo {
+          width: 3vw;
+          height: 3vw;
           background: #fff;
+          border-radius: 50%;
           display: flex;
-          align-items: center;
           justify-content: center;
-          overflow: hidden;
+          align-items: center;
+          transition: transform 0.3s ease;
 
           img {
-            width: 2.5vw;
-            height: auto;
+            width: 1.5vw;
           }
         }
 
         span {
-          font-size: 1vw;
+          color: #fff;
+          font-family: var(--font-heading);
+          font-size: 1.2vw;
+          font-weight: 700;
         }
+
+        &:hover .logo {
+          animation: bounce 0.6s infinite alternate;
+        }
+      }
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-0.5vw);
       }
     }
   }
 
   .contact-right {
     position: relative;
-    flex: 1;
-    height: 60vh;
-
-    img:first-child {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 28vw;
-      height: auto;
-      z-index: 2;
-    }
-
-    img:last-child {
+    .star-small {
       position: absolute;
       top: -5vh;
-      right: 5vw;
-      width: 22vw;
-      height: auto;
-      z-index: 1;
+      right: 16vw;
+      width: 8vw;
+      height: 8vw;
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .star-big {
+      position: absolute;
+      top: 12vh;
+      right: 0;
+      width: 20vw;
+      height: 35vw;
     }
   }
 }
